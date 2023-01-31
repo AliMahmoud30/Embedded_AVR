@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "Overflow_mode", "Overflow_mode\Overflow_mode.cproj", "{351F4F95-41C6-44ED-8CAC-3C8B41C55CB0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{351F4F95-41C6-44ED-8CAC-3C8B41C55CB0}.Debug|AVR.ActiveCfg = Debug|AVR
+		{351F4F95-41C6-44ED-8CAC-3C8B41C55CB0}.Debug|AVR.Build.0 = Debug|AVR
+		{351F4F95-41C6-44ED-8CAC-3C8B41C55CB0}.Release|AVR.ActiveCfg = Release|AVR
+		{351F4F95-41C6-44ED-8CAC-3C8B41C55CB0}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,400 @@
+
+DIO_Test.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000001fe  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  00800060  000001fe  00000272  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .stab         000006cc  00000000  00000000  00000274  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  3 .stabstr      00000085  00000000  00000000  00000940  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_aranges 000000a0  00000000  00000000  000009c8  2**3
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00000635  00000000  00000000  00000a68  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 000001cc  00000000  00000000  0000109d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   000003b0  00000000  00000000  00001269  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  000000d8  00000000  00000000  0000161c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    000001d3  00000000  00000000  000016f4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    00000280  00000000  00000000  000018c7  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 2a 00 	jmp	0x54	; 0x54 <__ctors_end>
+   4:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+   8:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+   c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  10:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  14:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  18:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  1c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  20:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  24:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  28:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  2c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  30:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  34:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  38:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  3c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  40:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  44:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  48:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  4c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  50:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+
+00000054 <__ctors_end>:
+  54:	11 24       	eor	r1, r1
+  56:	1f be       	out	0x3f, r1	; 63
+  58:	cf e5       	ldi	r28, 0x5F	; 95
+  5a:	d8 e0       	ldi	r29, 0x08	; 8
+  5c:	de bf       	out	0x3e, r29	; 62
+  5e:	cd bf       	out	0x3d, r28	; 61
+
+00000060 <__do_copy_data>:
+  60:	10 e0       	ldi	r17, 0x00	; 0
+  62:	a0 e6       	ldi	r26, 0x60	; 96
+  64:	b0 e0       	ldi	r27, 0x00	; 0
+  66:	ee ef       	ldi	r30, 0xFE	; 254
+  68:	f1 e0       	ldi	r31, 0x01	; 1
+  6a:	02 c0       	rjmp	.+4      	; 0x70 <__do_copy_data+0x10>
+  6c:	05 90       	lpm	r0, Z+
+  6e:	0d 92       	st	X+, r0
+  70:	a0 36       	cpi	r26, 0x60	; 96
+  72:	b1 07       	cpc	r27, r17
+  74:	d9 f7       	brne	.-10     	; 0x6c <__do_copy_data+0xc>
+
+00000076 <__do_clear_bss>:
+  76:	10 e0       	ldi	r17, 0x00	; 0
+  78:	a0 e6       	ldi	r26, 0x60	; 96
+  7a:	b0 e0       	ldi	r27, 0x00	; 0
+  7c:	01 c0       	rjmp	.+2      	; 0x80 <.do_clear_bss_start>
+
+0000007e <.do_clear_bss_loop>:
+  7e:	1d 92       	st	X+, r1
+
+00000080 <.do_clear_bss_start>:
+  80:	a0 36       	cpi	r26, 0x60	; 96
+  82:	b1 07       	cpc	r27, r17
+  84:	e1 f7       	brne	.-8      	; 0x7e <.do_clear_bss_loop>
+  86:	0e 94 49 00 	call	0x92	; 0x92 <main>
+  8a:	0c 94 fd 00 	jmp	0x1fa	; 0x1fa <_exit>
+
+0000008e <__bad_interrupt>:
+  8e:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000092 <main>:
+
+
+int main(void)
+{
+	
+	DIO_Set_Port_Direction(A,OUTPUT);
+  92:	89 e3       	ldi	r24, 0x39	; 57
+  94:	61 e0       	ldi	r22, 0x01	; 1
+  96:	0e 94 6c 00 	call	0xd8	; 0xd8 <DIO_Set_Port_Direction>
+	DIO_Set_Port_Value(A,0x55);
+  9a:	89 e3       	ldi	r24, 0x39	; 57
+  9c:	65 e5       	ldi	r22, 0x55	; 85
+  9e:	0e 94 9c 00 	call	0x138	; 0x138 <DIO_Set_Port_Value>
+	MY_PORTB=0xFF;
+	_delay_ms(1000);
+*/
+    while(1)
+    {
+		DIO_Set_Port_Value(A,0XFF);
+  a2:	89 e3       	ldi	r24, 0x39	; 57
+  a4:	6f ef       	ldi	r22, 0xFF	; 255
+  a6:	0e 94 9c 00 	call	0x138	; 0x138 <DIO_Set_Port_Value>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+  aa:	8f ef       	ldi	r24, 0xFF	; 255
+  ac:	99 e6       	ldi	r25, 0x69	; 105
+  ae:	a8 e1       	ldi	r26, 0x18	; 24
+  b0:	81 50       	subi	r24, 0x01	; 1
+  b2:	90 40       	sbci	r25, 0x00	; 0
+  b4:	a0 40       	sbci	r26, 0x00	; 0
+  b6:	e1 f7       	brne	.-8      	; 0xb0 <main+0x1e>
+  b8:	00 c0       	rjmp	.+0      	; 0xba <main+0x28>
+  ba:	00 00       	nop
+		_delay_ms(1000);
+		DIO_Set_Port_Value(A,0X00);
+  bc:	89 e3       	ldi	r24, 0x39	; 57
+  be:	60 e0       	ldi	r22, 0x00	; 0
+  c0:	0e 94 9c 00 	call	0x138	; 0x138 <DIO_Set_Port_Value>
+  c4:	8f ef       	ldi	r24, 0xFF	; 255
+  c6:	99 e6       	ldi	r25, 0x69	; 105
+  c8:	a8 e1       	ldi	r26, 0x18	; 24
+  ca:	81 50       	subi	r24, 0x01	; 1
+  cc:	90 40       	sbci	r25, 0x00	; 0
+  ce:	a0 40       	sbci	r26, 0x00	; 0
+  d0:	e1 f7       	brne	.-8      	; 0xca <main+0x38>
+  d2:	00 c0       	rjmp	.+0      	; 0xd4 <main+0x42>
+  d4:	00 00       	nop
+  d6:	e5 cf       	rjmp	.-54     	; 0xa2 <main+0x10>
+
+000000d8 <DIO_Set_Port_Direction>:
+
+
+/*        SET Direction         */ 
+void DIO_Set_Port_Direction(u8 Base, u8 Direction)
+{
+	if((Direction == OUTPUT)||(Direction==1))
+  d8:	61 30       	cpi	r22, 0x01	; 1
+  da:	29 f4       	brne	.+10     	; 0xe6 <DIO_Set_Port_Direction+0xe>
+	{
+		(*(volatile u8*)(Base+1)) = 0xFF;
+  dc:	e8 2f       	mov	r30, r24
+  de:	f0 e0       	ldi	r31, 0x00	; 0
+  e0:	8f ef       	ldi	r24, 0xFF	; 255
+  e2:	81 83       	std	Z+1, r24	; 0x01
+  e4:	08 95       	ret
+	}
+	else if((Direction == INPUT)||(Direction==0))
+  e6:	66 23       	and	r22, r22
+  e8:	19 f4       	brne	.+6      	; 0xf0 <DIO_Set_Port_Direction+0x18>
+	{
+		(*(volatile u8*)(Base+1)) = 0x00;
+  ea:	e8 2f       	mov	r30, r24
+  ec:	f0 e0       	ldi	r31, 0x00	; 0
+  ee:	11 82       	std	Z+1, r1	; 0x01
+  f0:	08 95       	ret
+
+000000f2 <DIO_Set_Pin_Direction>:
+
+
+void DIO_Set_Pin_Direction(u8 Base, u8 PIN, u8 Direction)
+{
+
+	if((Direction == OUTPUT) || (Direction == 1))
+  f2:	41 30       	cpi	r20, 0x01	; 1
+  f4:	79 f4       	brne	.+30     	; 0x114 <DIO_Set_Pin_Direction+0x22>
+	{
+		//SET_BIT((*(volatile u8*)(Base+1)),PIN);  // OUTPUT = 1
+		(*(volatile u8*)(Base+1))|=(1<<PIN);
+  f6:	e8 2f       	mov	r30, r24
+  f8:	f0 e0       	ldi	r31, 0x00	; 0
+  fa:	21 81       	ldd	r18, Z+1	; 0x01
+  fc:	81 e0       	ldi	r24, 0x01	; 1
+  fe:	90 e0       	ldi	r25, 0x00	; 0
+ 100:	ac 01       	movw	r20, r24
+ 102:	02 c0       	rjmp	.+4      	; 0x108 <DIO_Set_Pin_Direction+0x16>
+ 104:	44 0f       	add	r20, r20
+ 106:	55 1f       	adc	r21, r21
+ 108:	6a 95       	dec	r22
+ 10a:	e2 f7       	brpl	.-8      	; 0x104 <DIO_Set_Pin_Direction+0x12>
+ 10c:	ba 01       	movw	r22, r20
+ 10e:	62 2b       	or	r22, r18
+ 110:	61 83       	std	Z+1, r22	; 0x01
+ 112:	08 95       	ret
+	}
+	else if((Direction == INPUT) || (Direction == 0))
+ 114:	44 23       	and	r20, r20
+ 116:	79 f4       	brne	.+30     	; 0x136 <DIO_Set_Pin_Direction+0x44>
+	{
+		//CLR_BIT((*(volatile u8*)(Base+1)),PIN); // INPUT = 0;
+		(*(volatile u8*)(Base+1))&=(~(1<<PIN)); 
+ 118:	e8 2f       	mov	r30, r24
+ 11a:	f0 e0       	ldi	r31, 0x00	; 0
+ 11c:	21 81       	ldd	r18, Z+1	; 0x01
+ 11e:	81 e0       	ldi	r24, 0x01	; 1
+ 120:	90 e0       	ldi	r25, 0x00	; 0
+ 122:	ac 01       	movw	r20, r24
+ 124:	02 c0       	rjmp	.+4      	; 0x12a <DIO_Set_Pin_Direction+0x38>
+ 126:	44 0f       	add	r20, r20
+ 128:	55 1f       	adc	r21, r21
+ 12a:	6a 95       	dec	r22
+ 12c:	e2 f7       	brpl	.-8      	; 0x126 <DIO_Set_Pin_Direction+0x34>
+ 12e:	ba 01       	movw	r22, r20
+ 130:	60 95       	com	r22
+ 132:	62 23       	and	r22, r18
+ 134:	61 83       	std	Z+1, r22	; 0x01
+ 136:	08 95       	ret
+
+00000138 <DIO_Set_Port_Value>:
+
+
+/*        SET Value         */ 
+void DIO_Set_Port_Value(u8 Base, u8 Value)
+{
+	(*(volatile u8*)(Base+2)) = Value;
+ 138:	e8 2f       	mov	r30, r24
+ 13a:	f0 e0       	ldi	r31, 0x00	; 0
+ 13c:	62 83       	std	Z+2, r22	; 0x02
+}
+ 13e:	08 95       	ret
+
+00000140 <DIO_Set_Pin_Value>:
+
+void DIO_Set_Pin_Value(u8 Base,u8 PIN, u8 Value)
+{
+	if((Value == HIGH) || (Value == 1))
+ 140:	41 30       	cpi	r20, 0x01	; 1
+ 142:	79 f4       	brne	.+30     	; 0x162 <DIO_Set_Pin_Value+0x22>
+	{	//SET_BIT((*(volatile u8*)(Base+2)),PIN);
+		(*(volatile u8*)(Base+2))|=(1<<PIN);
+ 144:	e8 2f       	mov	r30, r24
+ 146:	f0 e0       	ldi	r31, 0x00	; 0
+ 148:	22 81       	ldd	r18, Z+2	; 0x02
+ 14a:	81 e0       	ldi	r24, 0x01	; 1
+ 14c:	90 e0       	ldi	r25, 0x00	; 0
+ 14e:	ac 01       	movw	r20, r24
+ 150:	02 c0       	rjmp	.+4      	; 0x156 <DIO_Set_Pin_Value+0x16>
+ 152:	44 0f       	add	r20, r20
+ 154:	55 1f       	adc	r21, r21
+ 156:	6a 95       	dec	r22
+ 158:	e2 f7       	brpl	.-8      	; 0x152 <DIO_Set_Pin_Value+0x12>
+ 15a:	ba 01       	movw	r22, r20
+ 15c:	62 2b       	or	r22, r18
+ 15e:	62 83       	std	Z+2, r22	; 0x02
+ 160:	08 95       	ret
+	}
+	else if((Value == LOW) || (Value == 0))
+ 162:	44 23       	and	r20, r20
+ 164:	79 f4       	brne	.+30     	; 0x184 <DIO_Set_Pin_Value+0x44>
+	{
+		(*(volatile u8*)(Base+2))&=(~(1<<PIN));
+ 166:	e8 2f       	mov	r30, r24
+ 168:	f0 e0       	ldi	r31, 0x00	; 0
+ 16a:	22 81       	ldd	r18, Z+2	; 0x02
+ 16c:	81 e0       	ldi	r24, 0x01	; 1
+ 16e:	90 e0       	ldi	r25, 0x00	; 0
+ 170:	ac 01       	movw	r20, r24
+ 172:	02 c0       	rjmp	.+4      	; 0x178 <DIO_Set_Pin_Value+0x38>
+ 174:	44 0f       	add	r20, r20
+ 176:	55 1f       	adc	r21, r21
+ 178:	6a 95       	dec	r22
+ 17a:	e2 f7       	brpl	.-8      	; 0x174 <DIO_Set_Pin_Value+0x34>
+ 17c:	ba 01       	movw	r22, r20
+ 17e:	60 95       	com	r22
+ 180:	62 23       	and	r22, r18
+ 182:	62 83       	std	Z+2, r22	; 0x02
+ 184:	08 95       	ret
+
+00000186 <DIO_Get_Port_value>:
+	}
+}
+
+/*        Get Value         */ 
+u8 DIO_Get_Port_value(u8 Base)
+{
+ 186:	cf 93       	push	r28
+ 188:	df 93       	push	r29
+ 18a:	0f 92       	push	r0
+ 18c:	cd b7       	in	r28, 0x3d	; 61
+ 18e:	de b7       	in	r29, 0x3e	; 62
+	 volatile u8 Value;
+	Value = (*(volatile u8*)(Base));
+ 190:	e8 2f       	mov	r30, r24
+ 192:	f0 e0       	ldi	r31, 0x00	; 0
+ 194:	80 81       	ld	r24, Z
+ 196:	89 83       	std	Y+1, r24	; 0x01
+	return Value;
+ 198:	89 81       	ldd	r24, Y+1	; 0x01
+}
+ 19a:	0f 90       	pop	r0
+ 19c:	df 91       	pop	r29
+ 19e:	cf 91       	pop	r28
+ 1a0:	08 95       	ret
+
+000001a2 <DIO_Get_Pin_value>:
+
+
+u8 DIO_Get_Pin_value (u8 Base, u8 PIN)
+{
+ 1a2:	cf 93       	push	r28
+ 1a4:	df 93       	push	r29
+ 1a6:	0f 92       	push	r0
+ 1a8:	cd b7       	in	r28, 0x3d	; 61
+ 1aa:	de b7       	in	r29, 0x3e	; 62
+	volatile u8 Value;
+	Value = ((*(volatile u8*)(Base))>>PIN)&1;	
+ 1ac:	e8 2f       	mov	r30, r24
+ 1ae:	f0 e0       	ldi	r31, 0x00	; 0
+ 1b0:	80 81       	ld	r24, Z
+ 1b2:	90 e0       	ldi	r25, 0x00	; 0
+ 1b4:	9c 01       	movw	r18, r24
+ 1b6:	02 c0       	rjmp	.+4      	; 0x1bc <DIO_Get_Pin_value+0x1a>
+ 1b8:	35 95       	asr	r19
+ 1ba:	27 95       	ror	r18
+ 1bc:	6a 95       	dec	r22
+ 1be:	e2 f7       	brpl	.-8      	; 0x1b8 <DIO_Get_Pin_value+0x16>
+ 1c0:	b9 01       	movw	r22, r18
+ 1c2:	61 70       	andi	r22, 0x01	; 1
+ 1c4:	69 83       	std	Y+1, r22	; 0x01
+	return Value;
+ 1c6:	89 81       	ldd	r24, Y+1	; 0x01
+}
+ 1c8:	0f 90       	pop	r0
+ 1ca:	df 91       	pop	r29
+ 1cc:	cf 91       	pop	r28
+ 1ce:	08 95       	ret
+
+000001d0 <DIO_SET_HIGH_Nipple_Value>:
+/* Set HIGH NIPPLE */
+
+void DIO_SET_HIGH_Nipple_Value(u8 Base, u8 Data)
+{
+	Data<<=4;
+	(*(volatile u8*)(Base+2)) &=0x0f;  //to CLR HIGH NIPPLE Pins before write 
+ 1d0:	e8 2f       	mov	r30, r24
+ 1d2:	f0 e0       	ldi	r31, 0x00	; 0
+ 1d4:	82 81       	ldd	r24, Z+2	; 0x02
+ 1d6:	8f 70       	andi	r24, 0x0F	; 15
+ 1d8:	82 83       	std	Z+2, r24	; 0x02
+	(*(volatile u8*)(Base+2)) ^=Data;
+ 1da:	82 81       	ldd	r24, Z+2	; 0x02
+
+/* Set HIGH NIPPLE */
+
+void DIO_SET_HIGH_Nipple_Value(u8 Base, u8 Data)
+{
+	Data<<=4;
+ 1dc:	62 95       	swap	r22
+ 1de:	60 7f       	andi	r22, 0xF0	; 240
+	(*(volatile u8*)(Base+2)) &=0x0f;  //to CLR HIGH NIPPLE Pins before write 
+	(*(volatile u8*)(Base+2)) ^=Data;
+ 1e0:	68 27       	eor	r22, r24
+ 1e2:	62 83       	std	Z+2, r22	; 0x02
+	
+} 
+ 1e4:	08 95       	ret
+
+000001e6 <DIO_SET_LOW_Nipple_Value>:
+
+/* Set LOW NIPPLE */
+
+void DIO_SET_LOW_Nipple_Value(u8 Base, u8 Data)
+{
+	(*(volatile u8*)(Base+2)) &=0xf0;  //to CLR LOW NIPPLE before write
+ 1e6:	e8 2f       	mov	r30, r24
+ 1e8:	f0 e0       	ldi	r31, 0x00	; 0
+ 1ea:	82 81       	ldd	r24, Z+2	; 0x02
+ 1ec:	80 7f       	andi	r24, 0xF0	; 240
+ 1ee:	82 83       	std	Z+2, r24	; 0x02
+	(*(volatile u8*)(Base+2)) ^=(Data & 0x0F) ;
+ 1f0:	82 81       	ldd	r24, Z+2	; 0x02
+ 1f2:	6f 70       	andi	r22, 0x0F	; 15
+ 1f4:	68 27       	eor	r22, r24
+ 1f6:	62 83       	std	Z+2, r22	; 0x02
+	
+}
+ 1f8:	08 95       	ret
+
+000001fa <_exit>:
+ 1fa:	f8 94       	cli
+
+000001fc <__stop_program>:
+ 1fc:	ff cf       	rjmp	.-2      	; 0x1fc <__stop_program>

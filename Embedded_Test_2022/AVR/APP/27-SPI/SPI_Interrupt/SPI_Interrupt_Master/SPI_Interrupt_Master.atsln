@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "SPI_Interrupt_Master", "SPI_Interrupt_Master\SPI_Interrupt_Master.cproj", "{DCCFB231-8814-42E8-8BDE-A91FFBF60783}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DCCFB231-8814-42E8-8BDE-A91FFBF60783}.Debug|AVR.ActiveCfg = Debug|AVR
+		{DCCFB231-8814-42E8-8BDE-A91FFBF60783}.Debug|AVR.Build.0 = Debug|AVR
+		{DCCFB231-8814-42E8-8BDE-A91FFBF60783}.Release|AVR.ActiveCfg = Release|AVR
+		{DCCFB231-8814-42E8-8BDE-A91FFBF60783}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

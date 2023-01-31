@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "Servo_2", "Servo_2\Servo_2.cproj", "{2CF7215E-41EB-4F8F-952A-4870B1165671}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2CF7215E-41EB-4F8F-952A-4870B1165671}.Debug|AVR.ActiveCfg = Debug|AVR
+		{2CF7215E-41EB-4F8F-952A-4870B1165671}.Debug|AVR.Build.0 = Debug|AVR
+		{2CF7215E-41EB-4F8F-952A-4870B1165671}.Release|AVR.ActiveCfg = Release|AVR
+		{2CF7215E-41EB-4F8F-952A-4870B1165671}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,553 @@
+
+Fast_PWM.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000002ae  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  00800060  000002ae  00000322  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .stab         000006cc  00000000  00000000  00000324  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  3 .stabstr      00000085  00000000  00000000  000009f0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_aranges 000000c0  00000000  00000000  00000a78  2**3
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00000684  00000000  00000000  00000b38  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 000001ed  00000000  00000000  000011bc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   000002ce  00000000  00000000  000013a9  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000148  00000000  00000000  00001678  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    0000021f  00000000  00000000  000017c0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    00000347  00000000  00000000  000019df  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 2a 00 	jmp	0x54	; 0x54 <__ctors_end>
+   4:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+   8:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+   c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  10:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  14:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  18:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  1c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  20:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  24:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  28:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  2c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  30:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  34:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  38:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  3c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  40:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  44:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  48:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  4c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  50:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+
+00000054 <__ctors_end>:
+  54:	11 24       	eor	r1, r1
+  56:	1f be       	out	0x3f, r1	; 63
+  58:	cf e5       	ldi	r28, 0x5F	; 95
+  5a:	d8 e0       	ldi	r29, 0x08	; 8
+  5c:	de bf       	out	0x3e, r29	; 62
+  5e:	cd bf       	out	0x3d, r28	; 61
+
+00000060 <__do_copy_data>:
+  60:	10 e0       	ldi	r17, 0x00	; 0
+  62:	a0 e6       	ldi	r26, 0x60	; 96
+  64:	b0 e0       	ldi	r27, 0x00	; 0
+  66:	ee ea       	ldi	r30, 0xAE	; 174
+  68:	f2 e0       	ldi	r31, 0x02	; 2
+  6a:	02 c0       	rjmp	.+4      	; 0x70 <__do_copy_data+0x10>
+  6c:	05 90       	lpm	r0, Z+
+  6e:	0d 92       	st	X+, r0
+  70:	a0 36       	cpi	r26, 0x60	; 96
+  72:	b1 07       	cpc	r27, r17
+  74:	d9 f7       	brne	.-10     	; 0x6c <__do_copy_data+0xc>
+
+00000076 <__do_clear_bss>:
+  76:	10 e0       	ldi	r17, 0x00	; 0
+  78:	a0 e6       	ldi	r26, 0x60	; 96
+  7a:	b0 e0       	ldi	r27, 0x00	; 0
+  7c:	01 c0       	rjmp	.+2      	; 0x80 <.do_clear_bss_start>
+
+0000007e <.do_clear_bss_loop>:
+  7e:	1d 92       	st	X+, r1
+
+00000080 <.do_clear_bss_start>:
+  80:	a0 36       	cpi	r26, 0x60	; 96
+  82:	b1 07       	cpc	r27, r17
+  84:	e1 f7       	brne	.-8      	; 0x7e <.do_clear_bss_loop>
+  86:	0e 94 49 00 	call	0x92	; 0x92 <main>
+  8a:	0c 94 55 01 	jmp	0x2aa	; 0x2aa <_exit>
+
+0000008e <__bad_interrupt>:
+  8e:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000092 <main>:
+
+#include "Timers.h"
+
+int main(void)
+{
+	Timer0_PWM_init();
+  92:	0e 94 3b 01 	call	0x276	; 0x276 <Timer0_PWM_init>
+	Timer0_PWM_Change(127);
+  96:	8f e7       	ldi	r24, 0x7F	; 127
+  98:	0e 94 53 01 	call	0x2a6	; 0x2a6 <Timer0_PWM_Change>
+  9c:	ff cf       	rjmp	.-2      	; 0x9c <main+0xa>
+
+0000009e <DIO_Set_Port_Direction>:
+
+
+/*        SET Direction         */ 
+void DIO_Set_Port_Direction(u8 Base, u8 Direction)
+{
+	if((Direction == OUTPUT)||(Direction==1))
+  9e:	61 30       	cpi	r22, 0x01	; 1
+  a0:	29 f4       	brne	.+10     	; 0xac <DIO_Set_Port_Direction+0xe>
+	{
+		(*(volatile u8*)(Base+1)) = 0xFF;
+  a2:	e8 2f       	mov	r30, r24
+  a4:	f0 e0       	ldi	r31, 0x00	; 0
+  a6:	8f ef       	ldi	r24, 0xFF	; 255
+  a8:	81 83       	std	Z+1, r24	; 0x01
+  aa:	08 95       	ret
+	}
+	else if((Direction == INPUT)||(Direction==0))
+  ac:	66 23       	and	r22, r22
+  ae:	19 f4       	brne	.+6      	; 0xb6 <DIO_Set_Port_Direction+0x18>
+	{
+		(*(volatile u8*)(Base+1)) = 0x00;
+  b0:	e8 2f       	mov	r30, r24
+  b2:	f0 e0       	ldi	r31, 0x00	; 0
+  b4:	11 82       	std	Z+1, r1	; 0x01
+  b6:	08 95       	ret
+
+000000b8 <DIO_Set_Pin_Direction>:
+
+
+void DIO_Set_Pin_Direction(u8 Base, u8 PIN, u8 Direction)
+{
+
+	if((Direction == OUTPUT) || (Direction == 1))
+  b8:	41 30       	cpi	r20, 0x01	; 1
+  ba:	79 f4       	brne	.+30     	; 0xda <DIO_Set_Pin_Direction+0x22>
+	{
+		//SET_BIT((*(volatile u8*)(Base+1)),PIN);  // OUTPUT = 1
+		(*(volatile u8*)(Base+1))|=(1<<PIN);
+  bc:	e8 2f       	mov	r30, r24
+  be:	f0 e0       	ldi	r31, 0x00	; 0
+  c0:	21 81       	ldd	r18, Z+1	; 0x01
+  c2:	81 e0       	ldi	r24, 0x01	; 1
+  c4:	90 e0       	ldi	r25, 0x00	; 0
+  c6:	ac 01       	movw	r20, r24
+  c8:	02 c0       	rjmp	.+4      	; 0xce <DIO_Set_Pin_Direction+0x16>
+  ca:	44 0f       	add	r20, r20
+  cc:	55 1f       	adc	r21, r21
+  ce:	6a 95       	dec	r22
+  d0:	e2 f7       	brpl	.-8      	; 0xca <DIO_Set_Pin_Direction+0x12>
+  d2:	ba 01       	movw	r22, r20
+  d4:	62 2b       	or	r22, r18
+  d6:	61 83       	std	Z+1, r22	; 0x01
+  d8:	08 95       	ret
+	}
+	else if((Direction == INPUT) || (Direction == 0))
+  da:	44 23       	and	r20, r20
+  dc:	79 f4       	brne	.+30     	; 0xfc <DIO_Set_Pin_Direction+0x44>
+	{
+		//CLR_BIT((*(volatile u8*)(Base+1)),PIN); // INPUT = 0;
+		(*(volatile u8*)(Base+1))&=(~(1<<PIN)); 
+  de:	e8 2f       	mov	r30, r24
+  e0:	f0 e0       	ldi	r31, 0x00	; 0
+  e2:	21 81       	ldd	r18, Z+1	; 0x01
+  e4:	81 e0       	ldi	r24, 0x01	; 1
+  e6:	90 e0       	ldi	r25, 0x00	; 0
+  e8:	ac 01       	movw	r20, r24
+  ea:	02 c0       	rjmp	.+4      	; 0xf0 <DIO_Set_Pin_Direction+0x38>
+  ec:	44 0f       	add	r20, r20
+  ee:	55 1f       	adc	r21, r21
+  f0:	6a 95       	dec	r22
+  f2:	e2 f7       	brpl	.-8      	; 0xec <DIO_Set_Pin_Direction+0x34>
+  f4:	ba 01       	movw	r22, r20
+  f6:	60 95       	com	r22
+  f8:	62 23       	and	r22, r18
+  fa:	61 83       	std	Z+1, r22	; 0x01
+  fc:	08 95       	ret
+
+000000fe <DIO_Set_Port_Value>:
+
+
+/*        SET Value         */ 
+void DIO_Set_Port_Value(u8 Base, u8 Value)
+{
+	(*(volatile u8*)(Base+2)) = Value;
+  fe:	e8 2f       	mov	r30, r24
+ 100:	f0 e0       	ldi	r31, 0x00	; 0
+ 102:	62 83       	std	Z+2, r22	; 0x02
+}
+ 104:	08 95       	ret
+
+00000106 <DIO_Set_Pin_Value>:
+
+void DIO_Set_Pin_Value(u8 Base,u8 PIN, u8 Value)
+{
+	if((Value == HIGH) || (Value == 1))
+ 106:	41 30       	cpi	r20, 0x01	; 1
+ 108:	79 f4       	brne	.+30     	; 0x128 <DIO_Set_Pin_Value+0x22>
+	{	//SET_BIT((*(volatile u8*)(Base+2)),PIN);
+		(*(volatile u8*)(Base+2))|=(1<<PIN);
+ 10a:	e8 2f       	mov	r30, r24
+ 10c:	f0 e0       	ldi	r31, 0x00	; 0
+ 10e:	22 81       	ldd	r18, Z+2	; 0x02
+ 110:	81 e0       	ldi	r24, 0x01	; 1
+ 112:	90 e0       	ldi	r25, 0x00	; 0
+ 114:	ac 01       	movw	r20, r24
+ 116:	02 c0       	rjmp	.+4      	; 0x11c <DIO_Set_Pin_Value+0x16>
+ 118:	44 0f       	add	r20, r20
+ 11a:	55 1f       	adc	r21, r21
+ 11c:	6a 95       	dec	r22
+ 11e:	e2 f7       	brpl	.-8      	; 0x118 <DIO_Set_Pin_Value+0x12>
+ 120:	ba 01       	movw	r22, r20
+ 122:	62 2b       	or	r22, r18
+ 124:	62 83       	std	Z+2, r22	; 0x02
+ 126:	08 95       	ret
+	}
+	else if((Value == LOW) || (Value == 0))
+ 128:	44 23       	and	r20, r20
+ 12a:	79 f4       	brne	.+30     	; 0x14a <DIO_Set_Pin_Value+0x44>
+	{
+		(*(volatile u8*)(Base+2))&=(~(1<<PIN));
+ 12c:	e8 2f       	mov	r30, r24
+ 12e:	f0 e0       	ldi	r31, 0x00	; 0
+ 130:	22 81       	ldd	r18, Z+2	; 0x02
+ 132:	81 e0       	ldi	r24, 0x01	; 1
+ 134:	90 e0       	ldi	r25, 0x00	; 0
+ 136:	ac 01       	movw	r20, r24
+ 138:	02 c0       	rjmp	.+4      	; 0x13e <DIO_Set_Pin_Value+0x38>
+ 13a:	44 0f       	add	r20, r20
+ 13c:	55 1f       	adc	r21, r21
+ 13e:	6a 95       	dec	r22
+ 140:	e2 f7       	brpl	.-8      	; 0x13a <DIO_Set_Pin_Value+0x34>
+ 142:	ba 01       	movw	r22, r20
+ 144:	60 95       	com	r22
+ 146:	62 23       	and	r22, r18
+ 148:	62 83       	std	Z+2, r22	; 0x02
+ 14a:	08 95       	ret
+
+0000014c <DIO_Get_Port_value>:
+	}
+}
+
+/*        Get Value         */ 
+u8 DIO_Get_Port_value(u8 Base)
+{
+ 14c:	cf 93       	push	r28
+ 14e:	df 93       	push	r29
+ 150:	0f 92       	push	r0
+ 152:	cd b7       	in	r28, 0x3d	; 61
+ 154:	de b7       	in	r29, 0x3e	; 62
+	 volatile u8 Value;
+	Value = (*(volatile u8*)(Base));
+ 156:	e8 2f       	mov	r30, r24
+ 158:	f0 e0       	ldi	r31, 0x00	; 0
+ 15a:	80 81       	ld	r24, Z
+ 15c:	89 83       	std	Y+1, r24	; 0x01
+	return Value;
+ 15e:	89 81       	ldd	r24, Y+1	; 0x01
+}
+ 160:	0f 90       	pop	r0
+ 162:	df 91       	pop	r29
+ 164:	cf 91       	pop	r28
+ 166:	08 95       	ret
+
+00000168 <DIO_Get_Pin_value>:
+
+
+u8 DIO_Get_Pin_value (u8 Base, u8 PIN)
+{
+ 168:	cf 93       	push	r28
+ 16a:	df 93       	push	r29
+ 16c:	0f 92       	push	r0
+ 16e:	cd b7       	in	r28, 0x3d	; 61
+ 170:	de b7       	in	r29, 0x3e	; 62
+	volatile u8 Value;
+	Value = ((*(volatile u8*)(Base))>>PIN)&1;	
+ 172:	e8 2f       	mov	r30, r24
+ 174:	f0 e0       	ldi	r31, 0x00	; 0
+ 176:	80 81       	ld	r24, Z
+ 178:	90 e0       	ldi	r25, 0x00	; 0
+ 17a:	9c 01       	movw	r18, r24
+ 17c:	02 c0       	rjmp	.+4      	; 0x182 <DIO_Get_Pin_value+0x1a>
+ 17e:	35 95       	asr	r19
+ 180:	27 95       	ror	r18
+ 182:	6a 95       	dec	r22
+ 184:	e2 f7       	brpl	.-8      	; 0x17e <DIO_Get_Pin_value+0x16>
+ 186:	b9 01       	movw	r22, r18
+ 188:	61 70       	andi	r22, 0x01	; 1
+ 18a:	69 83       	std	Y+1, r22	; 0x01
+	return Value;
+ 18c:	89 81       	ldd	r24, Y+1	; 0x01
+}
+ 18e:	0f 90       	pop	r0
+ 190:	df 91       	pop	r29
+ 192:	cf 91       	pop	r28
+ 194:	08 95       	ret
+
+00000196 <DIO_Toggle_Pin>:
+
+void DIO_Toggle_Pin(u8 Base, u8 PIN)
+{
+	*((volatile u8*)(Base+2))^=(1<<PIN);
+ 196:	e8 2f       	mov	r30, r24
+ 198:	f0 e0       	ldi	r31, 0x00	; 0
+ 19a:	22 81       	ldd	r18, Z+2	; 0x02
+ 19c:	81 e0       	ldi	r24, 0x01	; 1
+ 19e:	90 e0       	ldi	r25, 0x00	; 0
+ 1a0:	ac 01       	movw	r20, r24
+ 1a2:	02 c0       	rjmp	.+4      	; 0x1a8 <DIO_Toggle_Pin+0x12>
+ 1a4:	44 0f       	add	r20, r20
+ 1a6:	55 1f       	adc	r21, r21
+ 1a8:	6a 95       	dec	r22
+ 1aa:	e2 f7       	brpl	.-8      	; 0x1a4 <DIO_Toggle_Pin+0xe>
+ 1ac:	ba 01       	movw	r22, r20
+ 1ae:	62 27       	eor	r22, r18
+ 1b0:	62 83       	std	Z+2, r22	; 0x02
+}
+ 1b2:	08 95       	ret
+
+000001b4 <DIO_SET_HIGH_Nipple_Value>:
+/* Set HIGH NIPPLE */
+
+void DIO_SET_HIGH_Nipple_Value(u8 Base, u8 Data)
+{
+	Data<<=4;
+	(*(volatile u8*)(Base+2)) &=0x0f;  //to CLR HIGH NIPPLE Pins before write 
+ 1b4:	e8 2f       	mov	r30, r24
+ 1b6:	f0 e0       	ldi	r31, 0x00	; 0
+ 1b8:	82 81       	ldd	r24, Z+2	; 0x02
+ 1ba:	8f 70       	andi	r24, 0x0F	; 15
+ 1bc:	82 83       	std	Z+2, r24	; 0x02
+	(*(volatile u8*)(Base+2)) ^=Data;
+ 1be:	82 81       	ldd	r24, Z+2	; 0x02
+
+/* Set HIGH NIPPLE */
+
+void DIO_SET_HIGH_Nipple_Value(u8 Base, u8 Data)
+{
+	Data<<=4;
+ 1c0:	62 95       	swap	r22
+ 1c2:	60 7f       	andi	r22, 0xF0	; 240
+	(*(volatile u8*)(Base+2)) &=0x0f;  //to CLR HIGH NIPPLE Pins before write 
+	(*(volatile u8*)(Base+2)) ^=Data;
+ 1c4:	68 27       	eor	r22, r24
+ 1c6:	62 83       	std	Z+2, r22	; 0x02
+	
+} 
+ 1c8:	08 95       	ret
+
+000001ca <DIO_SET_LOW_Nipple_Value>:
+
+/* Set LOW NIPPLE */
+
+void DIO_SET_LOW_Nipple_Value(u8 Base, u8 Data)
+{
+	(*(volatile u8*)(Base+2)) &=0xf0;  //to CLR LOW NIPPLE before write
+ 1ca:	e8 2f       	mov	r30, r24
+ 1cc:	f0 e0       	ldi	r31, 0x00	; 0
+ 1ce:	82 81       	ldd	r24, Z+2	; 0x02
+ 1d0:	80 7f       	andi	r24, 0xF0	; 240
+ 1d2:	82 83       	std	Z+2, r24	; 0x02
+	(*(volatile u8*)(Base+2)) ^=(Data & 0x0F) ;
+ 1d4:	82 81       	ldd	r24, Z+2	; 0x02
+ 1d6:	6f 70       	andi	r22, 0x0F	; 15
+ 1d8:	68 27       	eor	r22, r24
+ 1da:	62 83       	std	Z+2, r22	; 0x02
+	
+}
+ 1dc:	08 95       	ret
+
+000001de <Timer0_CTC_Interrupt_Init>:
+
+
+void Timer0_CTC_Interrupt_Init(u8 OCR0_Value)
+{
+	/* Set Output Compare Mode (CTC Mode) */
+	CLR_BIT(TCCR0,WGM00);
+ 1de:	93 b7       	in	r25, 0x33	; 51
+ 1e0:	9f 7b       	andi	r25, 0xBF	; 191
+ 1e2:	93 bf       	out	0x33, r25	; 51
+	SET_BIT(TCCR0,WGM01);
+ 1e4:	93 b7       	in	r25, 0x33	; 51
+ 1e6:	98 60       	ori	r25, 0x08	; 8
+ 1e8:	93 bf       	out	0x33, r25	; 51
+	
+	/* Set prescaler For Timer0 */
+	
+	TCCR0&=0xF8;					/* clear CS00, CS01 and CS02 before write */
+ 1ea:	93 b7       	in	r25, 0x33	; 51
+ 1ec:	98 7f       	andi	r25, 0xF8	; 248
+ 1ee:	93 bf       	out	0x33, r25	; 51
+	TCCR0|=TIMER0_CLOCK_SELECT;		/* write Prescaler value without change others bits*/
+ 1f0:	93 b7       	in	r25, 0x33	; 51
+ 1f2:	95 60       	ori	r25, 0x05	; 5
+ 1f4:	93 bf       	out	0x33, r25	; 51
+
+	/* Load Value to OCR0*/
+	OCR0=OCR0_Value;
+ 1f6:	8c bf       	out	0x3c, r24	; 60
+
+	/* Set Timer0 Interrupt Enable*/
+	SET_BIT(TIMSK,OCIE0);
+ 1f8:	89 b7       	in	r24, 0x39	; 57
+ 1fa:	82 60       	ori	r24, 0x02	; 2
+ 1fc:	89 bf       	out	0x39, r24	; 57
+
+	/* Set Global Interrupt (I-BIT) */
+	SET_BIT(SREG,I_BIT);
+ 1fe:	8f b7       	in	r24, 0x3f	; 63
+ 200:	80 68       	ori	r24, 0x80	; 128
+ 202:	8f bf       	out	0x3f, r24	; 63
+}
+ 204:	08 95       	ret
+
+00000206 <Timer0_Wave_Non_PWM>:
+
+
+void Timer0_Wave_Non_PWM(u8 OCR0_Value,u8 OC0_Pin_Mode)
+{
+ 206:	cf 93       	push	r28
+ 208:	df 93       	push	r29
+ 20a:	d8 2f       	mov	r29, r24
+ 20c:	c6 2f       	mov	r28, r22
+	
+	/* Set OC0 PIN as OUTPUT Pin */
+	DIO_Set_Pin_Direction(B,3,OUTPUT);
+ 20e:	86 e3       	ldi	r24, 0x36	; 54
+ 210:	63 e0       	ldi	r22, 0x03	; 3
+ 212:	41 e0       	ldi	r20, 0x01	; 1
+ 214:	0e 94 5c 00 	call	0xb8	; 0xb8 <DIO_Set_Pin_Direction>
+	/* Set CTC Mode in TCCR0 Register (WGM00=0, WGM01=1) */
+	CLR_BIT(TCCR0,WGM00);
+ 218:	83 b7       	in	r24, 0x33	; 51
+ 21a:	8f 7b       	andi	r24, 0xBF	; 191
+ 21c:	83 bf       	out	0x33, r24	; 51
+	SET_BIT(TCCR0,WGM01);
+ 21e:	83 b7       	in	r24, 0x33	; 51
+ 220:	88 60       	ori	r24, 0x08	; 8
+ 222:	83 bf       	out	0x33, r24	; 51
+	/* Set prescaler For Timer0 */
+	TCCR0&=0xF8;					/* clear CS00, CS01 and CS02 before write */
+ 224:	83 b7       	in	r24, 0x33	; 51
+ 226:	88 7f       	andi	r24, 0xF8	; 248
+ 228:	83 bf       	out	0x33, r24	; 51
+	TCCR0|=TIMER0_CLOCK_SELECT;		/* write Prescaler value without change others bits*/
+ 22a:	83 b7       	in	r24, 0x33	; 51
+ 22c:	85 60       	ori	r24, 0x05	; 5
+ 22e:	83 bf       	out	0x33, r24	; 51
+	/* Load OCR0 Value	*/
+	OCR0=OCR0_Value;
+ 230:	dc bf       	out	0x3c, r29	; 60
+	/* Set OC0 PIN Mode (Toggle or Clear or Set ) on compare Match */
+	TCCR0|=GET_BIT(OC0_Pin_Mode,0)<<COM00;
+ 232:	43 b7       	in	r20, 0x33	; 51
+ 234:	2c 2f       	mov	r18, r28
+ 236:	30 e0       	ldi	r19, 0x00	; 0
+ 238:	21 70       	andi	r18, 0x01	; 1
+ 23a:	30 70       	andi	r19, 0x00	; 0
+ 23c:	c9 01       	movw	r24, r18
+ 23e:	82 95       	swap	r24
+ 240:	92 95       	swap	r25
+ 242:	90 7f       	andi	r25, 0xF0	; 240
+ 244:	98 27       	eor	r25, r24
+ 246:	80 7f       	andi	r24, 0xF0	; 240
+ 248:	98 27       	eor	r25, r24
+ 24a:	84 2b       	or	r24, r20
+ 24c:	83 bf       	out	0x33, r24	; 51
+	TCCR0|=GET_BIT(OC0_Pin_Mode,1)<<COM01;
+ 24e:	23 b7       	in	r18, 0x33	; 51
+ 250:	c6 95       	lsr	r28
+ 252:	8c 2f       	mov	r24, r28
+ 254:	90 e0       	ldi	r25, 0x00	; 0
+ 256:	81 70       	andi	r24, 0x01	; 1
+ 258:	90 70       	andi	r25, 0x00	; 0
+ 25a:	ec 01       	movw	r28, r24
+ 25c:	cc 0f       	add	r28, r28
+ 25e:	dd 1f       	adc	r29, r29
+ 260:	c2 95       	swap	r28
+ 262:	d2 95       	swap	r29
+ 264:	d0 7f       	andi	r29, 0xF0	; 240
+ 266:	dc 27       	eor	r29, r28
+ 268:	c0 7f       	andi	r28, 0xF0	; 240
+ 26a:	dc 27       	eor	r29, r28
+ 26c:	c2 2b       	or	r28, r18
+ 26e:	c3 bf       	out	0x33, r28	; 51
+}
+ 270:	df 91       	pop	r29
+ 272:	cf 91       	pop	r28
+ 274:	08 95       	ret
+
+00000276 <Timer0_PWM_init>:
+void Timer0_PWM_init(void)
+{
+	/* Set OC0 PIN(PB3) as OUTPUT PIN */
+	DIO_Set_Pin_Direction(B,3,OUTPUT);
+ 276:	86 e3       	ldi	r24, 0x36	; 54
+ 278:	63 e0       	ldi	r22, 0x03	; 3
+ 27a:	41 e0       	ldi	r20, 0x01	; 1
+ 27c:	0e 94 5c 00 	call	0xb8	; 0xb8 <DIO_Set_Pin_Direction>
+	/* Set Fast PWM Mode in TCCR0 Register (WGM00=1, WGM01=1) */
+	SET_BIT(TCCR0,WGM00);
+ 280:	83 b7       	in	r24, 0x33	; 51
+ 282:	80 64       	ori	r24, 0x40	; 64
+ 284:	83 bf       	out	0x33, r24	; 51
+	SET_BIT(TCCR0,WGM01);
+ 286:	83 b7       	in	r24, 0x33	; 51
+ 288:	88 60       	ori	r24, 0x08	; 8
+ 28a:	83 bf       	out	0x33, r24	; 51
+	/* Set prescaler For Timer0 */
+	TCCR0&=0xF8;					/* clear CS00, CS01 and CS02 before write */
+ 28c:	83 b7       	in	r24, 0x33	; 51
+ 28e:	88 7f       	andi	r24, 0xF8	; 248
+ 290:	83 bf       	out	0x33, r24	; 51
+	TCCR0|=TIMER0_CLOCK_SELECT;		/* write Prescaler value without change others bits*/
+ 292:	83 b7       	in	r24, 0x33	; 51
+ 294:	85 60       	ori	r24, 0x05	; 5
+ 296:	83 bf       	out	0x33, r24	; 51
+	
+	/* Set OC0 PIN Mode (clear on Compare Match, set on Bottom >> COM00=0,COM01=1	 >> Non-Inverting Mode
+						 Set on Compare Match, Clear on Bottom >> COM00=1,COM01=1    >> inverting Mode */
+	CLR_BIT(TCCR0,COM00);
+ 298:	83 b7       	in	r24, 0x33	; 51
+ 29a:	8f 7e       	andi	r24, 0xEF	; 239
+ 29c:	83 bf       	out	0x33, r24	; 51
+	SET_BIT(TCCR0,COM01);
+ 29e:	83 b7       	in	r24, 0x33	; 51
+ 2a0:	80 62       	ori	r24, 0x20	; 32
+ 2a2:	83 bf       	out	0x33, r24	; 51
+}
+ 2a4:	08 95       	ret
+
+000002a6 <Timer0_PWM_Change>:
+
+
+void Timer0_PWM_Change(u8 PWM_Value)
+{
+	/* Load OCR0 Value	*/
+	OCR0=PWM_Value;
+ 2a6:	8c bf       	out	0x3c, r24	; 60
+}
+ 2a8:	08 95       	ret
+
+000002aa <_exit>:
+ 2aa:	f8 94       	cli
+
+000002ac <__stop_program>:
+ 2ac:	ff cf       	rjmp	.-2      	; 0x2ac <__stop_program>

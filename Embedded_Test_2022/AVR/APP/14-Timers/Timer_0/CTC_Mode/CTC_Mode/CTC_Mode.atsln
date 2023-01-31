@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "CTC_Mode", "CTC_Mode\CTC_Mode.cproj", "{F5116706-0204-49BD-998B-485F57D32A98}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F5116706-0204-49BD-998B-485F57D32A98}.Debug|AVR.ActiveCfg = Debug|AVR
+		{F5116706-0204-49BD-998B-485F57D32A98}.Debug|AVR.Build.0 = Debug|AVR
+		{F5116706-0204-49BD-998B-485F57D32A98}.Release|AVR.ActiveCfg = Release|AVR
+		{F5116706-0204-49BD-998B-485F57D32A98}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

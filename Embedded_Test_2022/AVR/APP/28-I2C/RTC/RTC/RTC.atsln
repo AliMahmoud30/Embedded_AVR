@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "RTC", "RTC\RTC.cproj", "{FA57B013-A9FB-4200-B880-0C86A5B50506}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA57B013-A9FB-4200-B880-0C86A5B50506}.Debug|AVR.ActiveCfg = Debug|AVR
+		{FA57B013-A9FB-4200-B880-0C86A5B50506}.Debug|AVR.Build.0 = Debug|AVR
+		{FA57B013-A9FB-4200-B880-0C86A5B50506}.Release|AVR.ActiveCfg = Release|AVR
+		{FA57B013-A9FB-4200-B880-0C86A5B50506}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

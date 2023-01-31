@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "Semaphore_1", "Semaphore_1\Semaphore_1.cproj", "{922F2C9C-DF98-4D2B-A58B-72169D4E6666}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{922F2C9C-DF98-4D2B-A58B-72169D4E6666}.Debug|AVR.ActiveCfg = Debug|AVR
+		{922F2C9C-DF98-4D2B-A58B-72169D4E6666}.Debug|AVR.Build.0 = Debug|AVR
+		{922F2C9C-DF98-4D2B-A58B-72169D4E6666}.Release|AVR.ActiveCfg = Release|AVR
+		{922F2C9C-DF98-4D2B-A58B-72169D4E6666}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
