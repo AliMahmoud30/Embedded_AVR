@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1654541590 source:d:\ali\3lemny academy\eng_zaghloul\c_test\test\main.c
+	<stdio.h>
+
+1668367875 source:d:\ali\3lemny academy\embedded_test_2022\c_test\test\main.c
+	<stdio.h>
+	<stdlib.h>
+

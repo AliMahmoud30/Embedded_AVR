@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1652764263 source:d:\ali\3lemny academy\eng_zaghloul\c_test\extern_keyword\extern_keyword\file.c
+
+1652764276 source:d:\ali\3lemny academy\eng_zaghloul\c_test\extern_keyword\extern_keyword\main.c
+	<stdio.h>
+	<stdlib.h>
+

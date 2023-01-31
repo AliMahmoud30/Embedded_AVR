@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1652633056 source:d:\ali\c_test\file_types\file_types\main.c
+	<stdio.h>
+	<stdlib.h>
+	"calculator.h"
+
+1652625975 d:\ali\c_test\file_types\file_types\calculator.h
+
+1652626030 source:d:\ali\c_test\file_types\file_types\calculator.c
+
+1652626030 source:d:\ali\3lemny academy\eng_zaghloul\c_test\file_types\file_types\calculator.c
+

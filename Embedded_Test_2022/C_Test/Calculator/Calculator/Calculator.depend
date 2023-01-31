@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1652135540 source:d:\ali\c_test\calculator\calculator\main.c
+	<stdio.h>
+	<stdlib.h>
+

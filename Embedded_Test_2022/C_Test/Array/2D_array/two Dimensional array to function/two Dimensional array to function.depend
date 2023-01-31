@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1654086007 source:d:\ali\3lemny academy\eng_zaghloul\c_test\array\2d_array\two dimensional array to function\main.c
+	<stdio.h>
+	<stdlib.h>
+	"2DArray.h"
+
+1654086646 d:\ali\3lemny academy\eng_zaghloul\c_test\array\2d_array\two dimensional array to function\2darray.h
+
+1654085672 source:d:\ali\3lemny academy\eng_zaghloul\c_test\array\2d_array\two dimensional array to function\2darray.c
+	<stdio.h>
+

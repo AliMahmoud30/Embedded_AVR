@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1653808683 source:d:\ali\3lemny academy\eng_zaghloul\c_test\array\sum 2_array\sum.c
+
+1653808843 source:d:\ali\3lemny academy\eng_zaghloul\c_test\array\sum 2_array\main.c
+	<stdio.h>
+	<stdlib.h>
+	"sum.h"
+
+1653808721 d:\ali\3lemny academy\eng_zaghloul\c_test\array\sum 2_array\sum.h
+

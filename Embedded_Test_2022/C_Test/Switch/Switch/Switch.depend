@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1652274136 source:d:\ali\c_test\switch\switch\main.c
+	<stdio.h>
+	<stdlib.h>
+

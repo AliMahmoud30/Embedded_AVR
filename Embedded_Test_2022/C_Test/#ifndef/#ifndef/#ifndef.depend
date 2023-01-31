@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1652935720 source:d:\ali\3lemny academy\eng_zaghloul\c_test\#ifndef\#ifndef\main.c
+	<stdio.h>
+	<stdlib.h>
+	"file.h"
+	"file.h"
+
+1652935753 d:\ali\3lemny academy\eng_zaghloul\c_test\#ifndef\#ifndef\file.h
+

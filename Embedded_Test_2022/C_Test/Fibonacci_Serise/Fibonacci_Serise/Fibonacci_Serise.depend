@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1652712770 source:d:\ali\c_test\fibonacci_serise\fibonacci_serise\main.c
+	<stdio.h>
+	<stdlib.h>
+

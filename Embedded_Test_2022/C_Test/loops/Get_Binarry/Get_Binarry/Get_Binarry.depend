@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1652372893 source:d:\ali\c_test\loops\get_binarry\get_binarry\main.c
+	<stdio.h>
+	<stdlib.h>
+

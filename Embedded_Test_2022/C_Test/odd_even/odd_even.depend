@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1652576108 source:d:\ali\c_test\odd_even\main.c
+	<stdio.h>
+	<stdlib.h>
+

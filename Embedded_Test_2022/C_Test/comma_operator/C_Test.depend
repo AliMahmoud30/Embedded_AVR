@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1646467991 source:d:\c_test\c_test\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1652108764 source:d:\ali\c_test\comma_operator\main.c
+	<stdio.h>
+	<stdlib.h>
+

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1654149284 source:d:\ali\3lemny academy\eng_zaghloul\c_test\structure\example_2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

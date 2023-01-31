@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1654155739 source:d:\ali\3lemny academy\eng_zaghloul\c_test\structure\pass structure by reference\main.c
+	<stdio.h>
+	<stdlib.h>
+	"struct.h"
+
+1654155900 d:\ali\3lemny academy\eng_zaghloul\c_test\structure\pass structure by reference\struct.h
+
+1654155762 source:d:\ali\3lemny academy\eng_zaghloul\c_test\structure\pass structure by reference\print_struct.c
+	"struct.h"
+

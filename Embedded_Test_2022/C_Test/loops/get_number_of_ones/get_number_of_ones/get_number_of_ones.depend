@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1652371185 source:d:\ali\c_test\loops\while loop\get_number_of_ones\get_number_of_ones\main.c
+	<stdio.h>
+	<stdlib.h>
+
