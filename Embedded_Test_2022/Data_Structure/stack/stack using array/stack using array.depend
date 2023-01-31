@@ -1,0 +1,30 @@
+# depslib dependency file v1.0
+1577543627 source:e:\3alamny academy\data structure and algorithms\data structure labs\stack\stack using array\main.c
+	<stdio.h>
+	"stack functions.h"
+
+1577543627 e:\3alamny academy\data structure and algorithms\data structure labs\stack\stack using array\stack functions.h
+
+1577543627 source:e:\3alamny academy\data structure and algorithms\data structure labs\stack\stack using array\stack functions.c
+	<stdio.h>
+
+1577546916 source:e:\3alamny academy\data structure and algorithms\data structure\data structure labs\stack\stack using array\main.c
+	<stdio.h>
+	<stdlib.h>
+	"stack functions.h"
+
+1577543627 e:\3alamny academy\data structure and algorithms\data structure\data structure labs\stack\stack using array\stack functions.h
+
+1577543627 source:e:\3alamny academy\data structure and algorithms\data structure\data structure labs\stack\stack using array\stack functions.c
+	<stdio.h>
+
+1577546916 source:d:\ali\3lemny academy\eng_zaghloul\embedded material\rar\codes\data structures\data structure labs\stack\stack using array\main.c
+	<stdio.h>
+	<stdlib.h>
+	"stack functions.h"
+
+1577543627 d:\ali\3lemny academy\eng_zaghloul\embedded material\rar\codes\data structures\data structure labs\stack\stack using array\stack functions.h
+
+1577543627 source:d:\ali\3lemny academy\eng_zaghloul\embedded material\rar\codes\data structures\data structure labs\stack\stack using array\stack functions.c
+	<stdio.h>
+

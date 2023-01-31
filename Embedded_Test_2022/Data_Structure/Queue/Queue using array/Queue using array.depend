@@ -1,0 +1,37 @@
+# depslib dependency file v1.0
+1577586587 source:e:\3alamny academy\data structure and algorithms\data structure labs\queue\queue using array\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Queue functions.h"
+
+1577586569 e:\3alamny academy\data structure and algorithms\data structure labs\queue\queue using array\queue functions.h
+
+1577586587 source:e:\3alamny academy\data structure and algorithms\data structure labs\queue\queue using array\queue functions.c
+	<stdio.h>
+	<stdlib.h>
+	"Queue functions.h"
+
+1577586587 source:e:\3alamny academy\data structure and algorithms\data structure\data structure labs\queue\queue using array\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Queue functions.h"
+
+1577586569 e:\3alamny academy\data structure and algorithms\data structure\data structure labs\queue\queue using array\queue functions.h
+
+1577586587 source:e:\3alamny academy\data structure and algorithms\data structure\data structure labs\queue\queue using array\queue functions.c
+	<stdio.h>
+	<stdlib.h>
+	"Queue functions.h"
+
+1577586587 source:d:\ali\3lemny academy\embedded_test_2022\data_structure\queue\queue using array\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Queue functions.h"
+
+1577586569 d:\ali\3lemny academy\embedded_test_2022\data_structure\queue\queue using array\queue functions.h
+
+1577586587 source:d:\ali\3lemny academy\embedded_test_2022\data_structure\queue\queue using array\queue functions.c
+	<stdio.h>
+	<stdlib.h>
+	"Queue functions.h"
+

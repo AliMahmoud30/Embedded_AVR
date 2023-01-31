@@ -1,0 +1,32 @@
+# depslib dependency file v1.0
+1577552577 source:e:\3alamny academy\data structure and algorithms\data structure labs\stack\stack using linked list\main.c
+	<stdio.h>
+	<stdlib.h>
+	"stack functions.h"
+
+1577552694 e:\3alamny academy\data structure and algorithms\data structure labs\stack\stack using linked list\stack functions.h
+
+1577552577 source:e:\3alamny academy\data structure and algorithms\data structure\data structure labs\stack\stack using linked list\main.c
+	<stdio.h>
+	<stdlib.h>
+	"stack functions.h"
+
+1577552694 e:\3alamny academy\data structure and algorithms\data structure\data structure labs\stack\stack using linked list\stack functions.h
+
+1577554800 source:e:\3alamny academy\data structure and algorithms\data structure\data structure labs\stack\stack using linked list\stack functions.c
+	<stdio.h>
+	<stdlib.h>
+	"stack functions.h"
+
+1577552577 source:d:\ali\3lemny academy\eng_zaghloul\embedded material\rar\codes\data structures\data structure labs\stack\stack using linked list\main.c
+	<stdio.h>
+	<stdlib.h>
+	"stack functions.h"
+
+1577552694 d:\ali\3lemny academy\eng_zaghloul\embedded material\rar\codes\data structures\data structure labs\stack\stack using linked list\stack functions.h
+
+1577554800 source:d:\ali\3lemny academy\eng_zaghloul\embedded material\rar\codes\data structures\data structure labs\stack\stack using linked list\stack functions.c
+	<stdio.h>
+	<stdlib.h>
+	"stack functions.h"
+

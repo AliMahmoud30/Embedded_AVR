@@ -1,0 +1,52 @@
+# depslib dependency file v1.0
+1577591007 source:e:\3alamny academy\data structure and algorithms\data structure labs\queue\queue using linked list\linked list.c
+	"linked list.h"
+
+1577593612 e:\3alamny academy\data structure and algorithms\data structure labs\queue\queue using linked list\linked list.h
+	<stdio.h>
+	<stdlib.h>
+
+1577593725 source:e:\3alamny academy\data structure and algorithms\data structure labs\queue\queue using linked list\queue functions.c
+	"linked list.h"
+
+1577594472 source:e:\3alamny academy\data structure and algorithms\data structure labs\queue\queue using linked list\main.c
+	<stdio.h>
+	<stdlib.h>
+	"queue functions.h"
+
+1577593678 e:\3alamny academy\data structure and algorithms\data structure labs\queue\queue using linked list\queue functions.h
+
+1577591007 source:e:\3alamny academy\data structure and algorithms\data structure\data structure labs\queue\queue using linked list\linked list.c
+	"linked list.h"
+
+1577593612 e:\3alamny academy\data structure and algorithms\data structure\data structure labs\queue\queue using linked list\linked list.h
+	<stdio.h>
+	<stdlib.h>
+
+1577596697 source:e:\3alamny academy\data structure and algorithms\data structure\data structure labs\queue\queue using linked list\main.c
+	<stdio.h>
+	<stdlib.h>
+	"queue functions.h"
+
+1577596694 e:\3alamny academy\data structure and algorithms\data structure\data structure labs\queue\queue using linked list\queue functions.h
+
+1577593725 source:e:\3alamny academy\data structure and algorithms\data structure\data structure labs\queue\queue using linked list\queue functions.c
+	"linked list.h"
+
+1577591007 source:d:\ali\3lemny academy\embedded_test_2022\data_structure\queue\queue using linked list\linked list.c
+	"linked list.h"
+
+1577593612 d:\ali\3lemny academy\embedded_test_2022\data_structure\queue\queue using linked list\linked list.h
+	<stdio.h>
+	<stdlib.h>
+
+1577596697 source:d:\ali\3lemny academy\embedded_test_2022\data_structure\queue\queue using linked list\main.c
+	<stdio.h>
+	<stdlib.h>
+	"queue functions.h"
+
+1577596694 d:\ali\3lemny academy\embedded_test_2022\data_structure\queue\queue using linked list\queue functions.h
+
+1577593725 source:d:\ali\3lemny academy\embedded_test_2022\data_structure\queue\queue using linked list\queue functions.c
+	"linked list.h"
+
